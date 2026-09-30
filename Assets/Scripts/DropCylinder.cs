@@ -32,10 +32,10 @@ public class DropCylinder : MonoBehaviour
             {
                 Instantiate(obstacle, hitInfo.point, obstacle.transform.rotation);
 
-                /*foreach (GameObject a in agent)
+                foreach (GameObject a in agent)
                 {
-                    a.GetComponent<NavMeshAgent>().SetDestination(hitInfo.point);
-                }*/
+                    a.GetComponent<AIControl>().DetectNewObstacle(hitInfo.point);
+                }
             }
         }
     }
